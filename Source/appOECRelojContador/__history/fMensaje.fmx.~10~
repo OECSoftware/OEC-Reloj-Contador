@@ -1,0 +1,102 @@
+object frmMensaje: TfrmMensaje
+  Left = 0
+  Top = 0
+  BorderIcons = [biSystemMenu]
+  BorderStyle = Single
+  Caption = 'Envianos un mensaje'
+  ClientHeight = 480
+  ClientWidth = 320
+  Position = OwnerFormCenter
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnClose = FormClose
+  DesignerMasterStyle = 0
+  object tbMain: TToolBar
+    Align = MostTop
+    Size.Width = 320.000000000000000000
+    Size.Height = 44.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    TintColor = claWhite
+    object recFondoToolBar: TRectangle
+      Align = Contents
+      Fill.Color = claWhite
+      Size.Width = 320.000000000000000000
+      Size.Height = 44.000000000000000000
+      Size.PlatformDefault = False
+      Stroke.Kind = None
+    end
+    object lblTitulo: TLabel
+      Align = Contents
+      StyledSettings = [Family, Size, Style]
+      Size.Width = 320.000000000000000000
+      Size.Height = 44.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'listboxheaderlabel'
+      TextSettings.FontColor = xFF2C3E50
+      TextSettings.HorzAlign = Center
+      Text = 'Mensaje'
+      TabOrder = 0
+    end
+    object sbtRegresar: TSpeedButton
+      Align = Left
+      ModalResult = 2
+      Size.Width = 80.000000000000000000
+      Size.Height = 44.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'backtoolbutton'
+      Text = 'Regresar'
+      OnClick = sbtRegresarClick
+    end
+    object sbtEnviar: TSpeedButton
+      Align = Right
+      ModalResult = 1
+      Position.X = 248.000000000000000000
+      Size.Width = 72.000000000000000000
+      Size.Height = 44.000000000000000000
+      Size.PlatformDefault = False
+      Text = 'Enviar'
+    end
+  end
+  object edAsunto: TEdit
+    Touch.InteractiveGestures = [LongTap, DoubleTap]
+    StyleLookup = 'editstyle'
+    TabOrder = 1
+    MaxLength = 8
+    Position.X = 8.000000000000000000
+    Position.Y = 52.000000000000000000
+    Margins.Left = 8.000000000000000000
+    Margins.Top = 8.000000000000000000
+    Margins.Right = 8.000000000000000000
+    Margins.Bottom = 8.000000000000000000
+    Size.Width = 304.000000000000000000
+    Size.Height = 38.000000000000000000
+    Size.PlatformDefault = False
+    TextPrompt = 'Asunto'
+  end
+  object memMensaje: TMemo
+    Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
+    CheckSpelling = True
+    DataDetectorTypes = []
+    Align = Client
+    Margins.Left = 8.000000000000000000
+    Margins.Top = 8.000000000000000000
+    Margins.Right = 8.000000000000000000
+    Margins.Bottom = 8.000000000000000000
+    Size.Width = 304.000000000000000000
+    Size.Height = 420.000000000000000000
+    Size.PlatformDefault = False
+    StyleLookup = 'memostyle'
+    TabOrder = 2
+    Viewport.Width = 300.000000000000000000
+    Viewport.Height = 416.000000000000000000
+  end
+  object smtp: TIdSMTP
+    Host = 'mail.oecsoftware.com.mx'
+    Port = 26
+    SASLMechanisms = <>
+    Left = 144
+    Top = 224
+  end
+end

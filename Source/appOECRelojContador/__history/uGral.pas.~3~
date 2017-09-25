@@ -1,0 +1,44 @@
+unit uGral;
+
+interface
+
+var
+  FormatoHora:string = 'tt';
+
+{
+y 	= Year last 2 digits
+yy 	= Year last 2 digits
+yyyy 	= Year as 4 digits
+m 	= Month number no-leading 0
+mm 	= Month number as 2 digits
+mmm 	= Month using ShortDayNames (Jan)
+mmmm 	= Month using LongDayNames (January)
+d 	= Day number no-leading 0
+dd 	= Day number as 2 digits
+ddd 	= Day using ShortDayNames (Sun)
+dddd 	= Day using LongDayNames  (Sunday)
+ddddd 	= Day in ShortDateFormat
+dddddd 	= Day in LongDateFormat
+
+c 	= Use ShortDateFormat + LongTimeFormat
+h 	= Hour number no-leading 0
+hh 	= Hour number as 2 digits
+n	= Minute number no-leading 0
+nn 	= Minute number as 2 digits
+s 	= Second number no-leading 0
+ss 	= Second number as 2 digits
+z	= Milli-sec number no-leading 0s
+zzz 	= Milli-sec number as 3 digits
+t 	= Use ShortTimeFormat
+tt 	= Use LongTimeFormat
+
+am/pm 	= Use after h : gives 12 hours + am/pm
+a/p 	= Use after h : gives 12 hours + a/p
+ampm 	= As a/p but TimeAMString,TimePMString
+/ 	= Substituted by DateSeparator value
+:	= Substituted by TimeSeparator value
+
+}
+implementation
+
+end.

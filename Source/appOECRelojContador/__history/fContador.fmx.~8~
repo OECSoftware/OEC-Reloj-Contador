@@ -1,0 +1,60 @@
+object fraContador: TfraContador
+  Size.Width = 320.000000000000000000
+  Size.Height = 50.000000000000000000
+  Size.PlatformDefault = False
+  object lblContador: TLabel
+    Align = Contents
+    StyledSettings = [Family, Style]
+    HitTest = True
+    Margins.Bottom = 18.000000000000000000
+    Size.Width = 320.000000000000000000
+    Size.Height = 32.000000000000000000
+    Size.PlatformDefault = False
+    StyleLookup = 'labelstyle'
+    TextSettings.Font.Size = 28.000000000000000000
+    TextSettings.FontColor = xFF27AE60
+    TextSettings.HorzAlign = Center
+    Text = '12:00 am'
+    TabOrder = 0
+  end
+  object lblOriginal: TLabel
+    Align = Bottom
+    StyledSettings = [Family, Style]
+    HitTest = True
+    Position.X = 50.000000000000000000
+    Position.Y = 32.000000000000000000
+    Size.Width = 240.000000000000000000
+    Size.Height = 18.000000000000000000
+    Size.PlatformDefault = False
+    TextSettings.Font.Size = 10.000000000000000000
+    TextSettings.FontColor = claGray
+    TextSettings.HorzAlign = Center
+    Text = 'lblOriginal'
+    TabOrder = 1
+  end
+  object layQuitar: TLayout
+    Align = MostRight
+    Position.X = 290.000000000000000000
+    Size.Width = 30.000000000000000000
+    Size.Height = 50.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 2
+    object sbtQuitar: TSpeedButton
+      Align = Center
+      Size.Width = 30.000000000000000000
+      Size.Height = 22.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'stoptoolbutton'
+      Text = 'Quitar'
+      OnClick = sbtQuitarClick
+    end
+  end
+  object sbtReiniciar: TSpeedButton
+    Align = MostLeft
+    Size.Width = 50.000000000000000000
+    Size.Height = 50.000000000000000000
+    Size.PlatformDefault = False
+    StyleLookup = 'refreshtoolbutton'
+    OnClick = sbtReiniciarClick
+  end
+end

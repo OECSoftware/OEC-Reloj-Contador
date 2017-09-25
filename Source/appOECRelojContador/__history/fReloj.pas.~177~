@@ -1,0 +1,158 @@
+unit fReloj;
+
+interface
+
+uses
+  System.DateUtils, TZDB, tReloj,
+  System.SysUtils, System.Types, System.UITypes, System.Classes, System.Variants,
+  FMX.Types, FMX.Graphics, FMX.Controls, FMX.Forms, FMX.Dialogs, FMX.StdCtrls,
+  FMX.Controls.Presentation, FMX.Layouts, FMX.MultiView;
+
+type
+  TfraReloj = class(TFrame)
+    lblReloj: TLabel;
+    lblZona: TLabel;
+    sbtQuitar: TSpeedButton;
+    layQuitar: TLayout;
+    procedure sbtQuitarClick(Sender: TObject);
+    procedure FrameResize(Sender: TObject);
+    procedure lblRelojClick(Sender: TObject);
+  private
+    tReloj:TThreadReloj;
+
+    FZonaHorario: string;
+    FZona: TBundledTimeZone;
+    FDeteniendo: Boolean;
+
+    procedure onReloj(Sender:TObject);
+
+    function getZonaVisible: boolean;
+    procedure setZonaVisible(const Value: boolean);
+    function getQuitarVisible: boolean;
+    procedure setQuitarVisible(const Value: boolean);
+    procedure setZonaHorario(const Value: string);
+  public
+    constructor Create(AOwner:TComponent); override;
+    destructor Destroy; override;
+
+    procedure Detener;
+    property Deteniendo:Boolean Read FDeteniendo;
+
+    property ZonaVisible:boolean read getZonaVisible write setZonaVisible;
+    property QuitarVisible:boolean read getQuitarVisible write setQuitarVisible;
+
+    property ZonaHoraria:string read FZonaHorario write setZonaHorario;
+  end;
+
+implementation
+
+{$R *.fmx}
+
+uses
+  uGral, fMain;
+
+{ TfraReloj }
+
+constructor TfraReloj.Create(AOwner: TComponent);
+begin
+inherited Create(AOwner);
+Height := 50;
+Anchors := [TAnchorKind.akLeft, TAnchorKind.akTop, TAnchorKind.akRight];
+
+FDeteniendo := False;
+
+FZona := TBundledTimeZone.GetTimeZone('America/Mexico_City');
+setZonaHorario('America/Mexico_City');
+
+tReloj := TThreadReloj.Create(True);
+tReloj.OnTimer := onReloj;
+tReloj.Start;
+
+onReloj(nil);
+end;
+
+destructor TfraReloj.Destroy;
+begin
+Detener;
+
+inherited Destroy;
+end;
+
+procedure TfraReloj.Detener;
+begin
+FDeteniendo := True;
+tReloj.Terminate;
+end;
+
+procedure TfraReloj.FrameResize(Sender: TObject);
+begin
+sbtQuitar.Height := Height;
+end;
+
+function TfraReloj.getQuitarVisible: boolean;
+begin
+Result := sbtQuitar.Visible;
+end;
+
+function TfraReloj.getZonaVisible: boolean;
+begin
+Result := lblZona.Visible;
+end;
+
+procedure TfraReloj.lblRelojClick(Sender: TObject);
+begin
+frmZonaHoraria := TfrmZonaHoraria.Create(Self);
+{$ifdef MSWINDOWS}
+if ispositiveresult(frmZonaHoraria.ShowModal) then begin
+  ZonaHoraria := frmZonaHoraria.Zona;
+end; {if}
+{$else}
+frmZonaHoraria.ShowModal(procedure (AModalResult:TModalResult)
+  begin
+    if IsPositiveResult(AModalResult) then
+      ZonaHoraria := frmZonaHoraria.Zona;
+  end
+);
+{$endif}
+
+end;
+
+procedure TfraReloj.onReloj(Sender: TObject);
+var
+  tz2: TBundledTimeZone;
+  UTCtime, tz2time: TDatetime;
+begin
+  if FDeteniendo then
+    Exit;
+
+  UTCtime := FZona.ToUniversalTime(Now);
+  tz2 := TBundledTimeZone.GetTimeZone(ZonaHoraria);
+  tz2time := tz2.ToLocalTime(UTCtime);
+
+  lblReloj.Text := FormatDateTime(FormatoHora, tz2time);
+  //lblReloj.Text := FormatDateTime(FormatoHora, UTCtime);
+end;
+
+procedure TfraReloj.sbtQuitarClick(Sender: TObject);
+begin
+Detener;
+Owner.DisposeOf;
+end;
+
+procedure TfraReloj.setQuitarVisible(const Value: boolean);
+begin
+layQuitar.Visible := Value;
+end;
+
+procedure TfraReloj.setZonaHorario(const Value: string);
+begin
+FZonaHorario := Value;
+lblZona.Text := Format('%s (%s)', [Value, FZona.Abbreviation]);
+end;
+
+procedure TfraReloj.setZonaVisible(const Value: boolean);
+begin
+lblZona.Visible := True;
+end;
+
+end.

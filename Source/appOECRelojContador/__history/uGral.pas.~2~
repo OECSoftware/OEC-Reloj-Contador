@@ -1,0 +1,10 @@
+unit uGral;
+
+interface
+
+var
+  FormatoHora:string = 'tt';
+
+implementation
+
+end.

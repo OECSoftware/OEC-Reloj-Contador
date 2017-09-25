@@ -1,0 +1,59 @@
+unit fITCmxRegistro;
+
+interface
+
+uses
+  System.SysUtils, System.Types, System.UITypes, System.Classes, System.Variants,
+  FMX.Types, FMX.Controls, FMX.Forms, FMX.Graphics, FMX.Dialogs, FMX.StdCtrls,
+  FMX.Objects, FMX.Controls.Presentation, FMX.ListBox, FMX.Layouts, FMX.Edit;
+
+type
+  TfrmITCmxRegistro = class(TForm)
+    tbMain: TToolBar;
+    recFondoToolBar: TRectangle;
+    lblTitulo: TLabel;
+    sbtRegresar: TSpeedButton;
+    sbtEnviar: TSpeedButton;
+    lstRegistro: TListBox;
+    lbiNombre: TListBoxItem;
+    lbiEMail: TListBoxItem;
+    lbiPais: TListBoxItem;
+    lbiRecibirMails: TListBoxItem;
+    lbiComentarios: TListBoxItem;
+    edNombre: TEdit;
+    edCorreo: TEdit;
+    cmbPais: TComboBox;
+    procedure sbtEnviarClick(Sender: TObject);
+  private
+    function Validar:Boolean;
+    function Registrar:Boolean;
+  public
+  end;
+
+var
+  frmITCmxRegistro: TfrmITCmxRegistro;
+
+implementation
+
+{$R *.fmx}
+
+uses fMain, cITCmxStatistics;
+
+function TfrmITCmxRegistro.Registrar: Boolean;
+begin
+
+end;
+
+procedure TfrmITCmxRegistro.sbtEnviarClick(Sender: TObject);
+begin
+if Validar then
+  if Registrar then
+    Close;
+end;
+
+function TfrmITCmxRegistro.Validar: Boolean;
+begin
+Result := False;
+end;
+
+end.

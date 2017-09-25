@@ -1,0 +1,137 @@
+unit fCronometro;
+
+interface
+
+uses
+  tCronometro,
+  System.SysUtils, System.Types, System.UITypes, System.Classes, System.Variants,
+  FMX.Types, FMX.Graphics, FMX.Controls, FMX.Forms, FMX.Dialogs, FMX.StdCtrls,
+  FMX.Controls.Presentation, FMX.Layouts;
+
+type
+  TfraCronometro = class(TFrame)
+    lblContador: TLabel;
+    layQuitar: TLayout;
+    sbtQuitar: TSpeedButton;
+    sbtIniciar: TSpeedButton;
+    procedure sbtQuitarClick(Sender: TObject);
+    procedure sbtIniciarClick(Sender: TObject);
+  private
+    tCronometro:TThreadCronometro;
+    FDeteniendo: Boolean;
+    FTotalSegundos: integer;
+    FDescripcion: string;
+
+    procedure onReloj(Sender:TObject);
+    function getQuitarVisible: boolean;
+    procedure setDescripcion(const Value: string);
+    procedure setQuitarVisible(const Value: boolean);
+  public
+    constructor Create(AOwner:TComponent); override;
+    destructor Destroy; override;
+
+    procedure Continuar;
+    procedure Pausa;
+
+    procedure Detener;
+    property Deteniendo:Boolean Read FDeteniendo;
+
+    property TotalSegundos:integer read FTotalSegundos;
+
+    property QuitarVisible:boolean read getQuitarVisible write setQuitarVisible;
+
+    property Descripcion:string read FDescripcion write setDescripcion;
+  end;
+
+implementation
+
+{$R *.fmx}
+
+{ TfraCronometro }
+
+procedure TfraCronometro.Continuar;
+begin
+tCronometro.Continuar;
+end;
+
+constructor TfraCronometro.Create(AOwner: TComponent);
+begin
+inherited Create(AOwner);
+Height := 50;
+Anchors := [TAnchorKind.akLeft, TAnchorKind.akTop, TAnchorKind.akRight];
+
+FDeteniendo := False;
+
+tCronometro := TThreadCronometro.Create(True);
+tCronometro.FreeOnTerminate := True;
+tCronometro.OnTimer := onReloj;
+
+FTotalSegundos := 0;
+end;
+
+destructor TfraCronometro.Destroy;
+begin
+Detener;
+
+inherited Destroy;
+end;
+
+procedure TfraCronometro.Detener;
+begin
+FDeteniendo := True;
+tCronometro.OnTimer := nil;
+tCronometro.Terminate;
+end;
+
+function TfraCronometro.getQuitarVisible: boolean;
+begin
+Result := sbtQuitar.Visible;
+end;
+
+procedure TfraCronometro.onReloj(Sender: TObject);
+var
+  horas, minutos, segundos: Integer;
+begin
+FTotalSegundos := FTotalSegundos + 1;
+if Assigned(lblContador) then begin
+  segundos := FTotalSegundos;
+  horas :=  segundos div 3600;
+  minutos := segundos div 60 mod 60;
+  segundos := segundos mod 60;
+  lblContador.Text := Format('%s:%s:%s', [FormatFloat(',00', horas),
+    FormatFloat('00', minutos), FormatFloat('00', segundos)]);
+end;
+end;
+
+procedure TfraCronometro.Pausa;
+begin
+tCronometro.Pausa;
+end;
+
+procedure TfraCronometro.sbtIniciarClick(Sender: TObject);
+begin
+if (sbtIniciar.StyleLookup = 'playtoolbutton') then begin
+end else begin
+  sbtIniciar.StyleLookup := 'pausetoolbutton';
+
+end;
+  sbtIniciar.StyleLookup := 'playtoolbutton';
+end;
+
+procedure TfraCronometro.sbtQuitarClick(Sender: TObject);
+begin
+Detener;
+Owner.DisposeOf;
+end;
+
+procedure TfraCronometro.setDescripcion(const Value: string);
+begin
+  FDescripcion := Value;
+end;
+
+procedure TfraCronometro.setQuitarVisible(const Value: boolean);
+begin
+layQuitar.Visible := Value;
+end;
+
+end.

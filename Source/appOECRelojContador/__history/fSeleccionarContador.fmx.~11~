@@ -1,0 +1,237 @@
+object frmSeleccionarContador: TfrmSeleccionarContador
+  Left = 0
+  Top = 0
+  BorderStyle = None
+  Caption = 'Contador'
+  ClientHeight = 480
+  ClientWidth = 320
+  Fill.Kind = Solid
+  Position = OwnerFormCenter
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  DesignerMasterStyle = 0
+  object tbMain: TToolBar
+    Align = MostTop
+    Size.Width = 320.000000000000000000
+    Size.Height = 44.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    TintColor = claWhite
+    object recFondoToolBar: TRectangle
+      Align = Contents
+      Fill.Color = claWhite
+      Size.Width = 320.000000000000000000
+      Size.Height = 44.000000000000000000
+      Size.PlatformDefault = False
+      Stroke.Kind = None
+    end
+    object lblTitulo: TLabel
+      Align = Contents
+      StyledSettings = [Family, Size, Style]
+      Size.Width = 320.000000000000000000
+      Size.Height = 44.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'listboxheaderlabel'
+      TextSettings.FontColor = xFF2C3E50
+      TextSettings.HorzAlign = Center
+      Text = 'Contador'
+      TabOrder = 0
+    end
+    object sbtRegresar: TSpeedButton
+      Align = Left
+      ModalResult = 2
+      Size.Width = 80.000000000000000000
+      Size.Height = 44.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'backtoolbutton'
+      Text = 'Regresar'
+    end
+    object sbtGuardar: TSpeedButton
+      Align = Right
+      ModalResult = 1
+      Position.X = 240.000000000000000000
+      Size.Width = 80.000000000000000000
+      Size.Height = 44.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'addtoolbutton'
+      Text = 'Guardar'
+    end
+  end
+  object edDescripcion: TEdit
+    Touch.InteractiveGestures = [LongTap, DoubleTap]
+    Align = Top
+    StyleLookup = 'editstyle'
+    TabOrder = 1
+    Position.X = 3.000000000000000000
+    Position.Y = 50.000000000000000000
+    Margins.Left = 3.000000000000000000
+    Margins.Top = 6.000000000000000000
+    Margins.Right = 3.000000000000000000
+    Margins.Bottom = 9.000000000000000000
+    Size.Width = 314.000000000000000000
+    Size.Height = 22.000000000000000000
+    Size.PlatformDefault = False
+    TextPrompt = 'Descripcion'
+  end
+  object Tiempo: TLabel
+    Align = Top
+    Margins.Left = 3.000000000000000000
+    Margins.Right = 3.000000000000000000
+    Margins.Bottom = 3.000000000000000000
+    Position.X = 3.000000000000000000
+    Position.Y = 81.000000000000000000
+    Size.Width = 314.000000000000000000
+    Size.Height = 17.000000000000000000
+    Size.PlatformDefault = False
+    StyleLookup = 'listboxitemdetaillabel'
+    Text = 'Tiempo'
+    TabOrder = 2
+  end
+  object TMSFMXTableViewEx1: TTMSFMXTableViewEx
+    DisableFocusEffect = False
+    Position.X = 24.000000000000000000
+    Position.Y = 112.000000000000000000
+    TabOrder = 4
+    Size.Width = 208.000000000000000000
+    Size.Height = 320.000000000000000000
+    Size.PlatformDefault = False
+    Fill.Kind = Solid
+    Stroke.Kind = Solid
+    CanFocus = True
+    Items = <
+      item
+        Caption = 'Item 0'
+        Description = 'Description of Item 0'
+        DataBoolean = False
+        Selected = False
+      end
+      item
+        Caption = 'Item 1'
+        Description = 'Description of Item 1'
+        DataBoolean = False
+        Selected = False
+      end
+      item
+        Caption = 'Item 2'
+        Description = 'Description of Item 2'
+        DataBoolean = False
+        Selected = False
+      end
+      item
+        Caption = 'Item 3'
+        Description = 'Description of Item 3'
+        DataBoolean = False
+        Selected = False
+      end
+      item
+        Caption = 'Item 4'
+        Description = 'Description of Item 4'
+        DataBoolean = False
+        Selected = False
+      end
+      item
+        Caption = 'Item 5'
+        Description = 'Description of Item 5'
+        DataBoolean = False
+        Selected = False
+      end
+      item
+        Caption = 'Item 6'
+        Description = 'Description of Item 6'
+        DataBoolean = False
+        Selected = False
+      end
+      item
+        Caption = 'Item 7'
+        Description = 'Description of Item 7'
+        DataBoolean = False
+        Selected = False
+      end
+      item
+        Caption = 'Item 8'
+        Description = 'Description of Item 8'
+        DataBoolean = False
+        Selected = False
+      end
+      item
+        Caption = 'Item 9'
+        Description = 'Description of Item 9'
+        DataBoolean = False
+        Selected = False
+      end
+      item
+        Caption = 'Item 10'
+        Description = 'Description of Item 10'
+        DataBoolean = False
+        Selected = False
+      end
+      item
+        Caption = 'Item 11'
+        Description = 'Description of Item 11'
+        DataBoolean = False
+        Selected = False
+      end
+      item
+        Caption = 'Item 12'
+        Description = 'Description of Item 12'
+        DataBoolean = False
+        Selected = False
+      end
+      item
+        Caption = 'Item 13'
+        Description = 'Description of Item 13'
+        DataBoolean = False
+        Selected = False
+      end
+      item
+        Caption = 'Item 14'
+        Description = 'Description of Item 14'
+        DataBoolean = False
+        Selected = False
+      end
+      item
+        Caption = 'Item 15'
+        Description = 'Description of Item 15'
+        DataBoolean = False
+        Selected = False
+      end
+      item
+        Caption = 'Item 16'
+        Description = 'Description of Item 16'
+        DataBoolean = False
+        Selected = False
+      end
+      item
+        Caption = 'Item 17'
+        Description = 'Description of Item 17'
+        DataBoolean = False
+        Selected = False
+      end
+      item
+        Caption = 'Item 18'
+        Description = 'Description of Item 18'
+        DataBoolean = False
+        Selected = False
+      end
+      item
+        Caption = 'Item 19'
+        Description = 'Description of Item 19'
+        DataBoolean = False
+        Selected = False
+      end
+      item
+        Caption = 'Item 20'
+        Description = 'Description of Item 20'
+        DataBoolean = False
+        Selected = False
+      end>
+    Categories = <>
+    MarkText = 'Mark'
+    MoveText = 'Move'
+    ArchiveText = 'Archive'
+    HeaderText = 'Header'
+    FooterText = 'Footer'
+    Version = '1.5.3.4'
+  end
+end

@@ -1,0 +1,439 @@
+object frmITCmxRegistro: TfrmITCmxRegistro
+  Left = 0
+  Top = 0
+  BorderIcons = [biSystemMenu]
+  BorderStyle = Single
+  Caption = 'Registrate en OEC Software'
+  ClientHeight = 480
+  ClientWidth = 320
+  Fill.Kind = Solid
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  DesignerMasterStyle = 3
+  object tbMain: TToolBar
+    Align = MostTop
+    Size.Width = 320.000000000000000000
+    Size.Height = 48.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    TintColor = claWhite
+    object recFondoToolBar: TRectangle
+      Align = Contents
+      Fill.Color = claWhite
+      Size.Width = 320.000000000000000000
+      Size.Height = 48.000000000000000000
+      Size.PlatformDefault = False
+      Stroke.Kind = None
+    end
+    object lblTitulo: TLabel
+      Align = Contents
+      StyledSettings = [Family, Size, Style]
+      Size.Width = 320.000000000000000000
+      Size.Height = 48.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'listboxheaderlabel'
+      TextSettings.FontColor = xFF2C3E50
+      TextSettings.HorzAlign = Center
+      Text = 'Registrarse'
+      TabOrder = 0
+    end
+    object sbtRegresar: TSpeedButton
+      Align = Left
+      ModalResult = 2
+      Size.Width = 48.000000000000000000
+      Size.Height = 48.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'backtoolbutton'
+      Text = 'Regresar'
+    end
+    object sbtEnviar: TSpeedButton
+      Align = Right
+      ModalResult = 1
+      Position.X = 248.000000000000000000
+      Size.Width = 72.000000000000000000
+      Size.Height = 48.000000000000000000
+      Size.PlatformDefault = False
+      Text = 'Enviar'
+      OnClick = sbtEnviarClick
+    end
+  end
+  object lstRegistro: TListBox
+    Align = Client
+    Size.Width = 320.000000000000000000
+    Size.Height = 432.000000000000000000
+    Size.PlatformDefault = False
+    StyleLookup = 'transparentlistboxstyle'
+    TabOrder = 1
+    DisableFocusEffect = True
+    DefaultItemStyles.ItemStyle = 'listboxitembottomdetail'
+    DefaultItemStyles.GroupHeaderStyle = ''
+    DefaultItemStyles.GroupFooterStyle = ''
+    Viewport.Width = 320.000000000000000000
+    Viewport.Height = 432.000000000000000000
+    object lbiNombre: TListBoxItem
+      ItemData.Detail = 'Nombre'
+      Size.Width = 320.000000000000000000
+      Size.Height = 58.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      object edNombre: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        Align = Top
+        TabOrder = 1
+        ReturnKeyType = Next
+        Position.X = 8.000000000000000000
+        Position.Y = 4.000000000000000000
+        Margins.Left = 8.000000000000000000
+        Margins.Top = 4.000000000000000000
+        Margins.Right = 8.000000000000000000
+        Size.Width = 304.000000000000000000
+        Size.Height = 32.000000000000000000
+        Size.PlatformDefault = False
+      end
+    end
+    object lbiEMail: TListBoxItem
+      ItemData.Detail = 'Correo electr'#243'nico'
+      Position.Y = 58.000000000000000000
+      Size.Width = 320.000000000000000000
+      Size.Height = 58.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 1
+      object edCorreo: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        Align = Top
+        TabOrder = 1
+        ReturnKeyType = Next
+        Position.X = 8.000000000000000000
+        Position.Y = 4.000000000000000000
+        Margins.Left = 8.000000000000000000
+        Margins.Top = 4.000000000000000000
+        Margins.Right = 8.000000000000000000
+        Size.Width = 304.000000000000000000
+        Size.Height = 32.000000000000000000
+        Size.PlatformDefault = False
+      end
+    end
+    object lbiPais: TListBoxItem
+      ItemData.Detail = 'Pais'
+      Position.Y = 116.000000000000000000
+      Size.Width = 320.000000000000000000
+      Size.Height = 58.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 2
+      object cmbPais: TComboBox
+        Align = Top
+        Items.Strings = (
+          'Afganist'#225'n'
+          'Akrotiri'
+          'Albania'
+          'Alemania'
+          'Andorra'
+          'Angola'
+          'Anguila'
+          'Ant'#225'rtida'
+          'Antigua y Barbuda'
+          'Antillas Neerlandesas'
+          'Arabia Saud'#237
+          'Arctic Ocean'
+          'Argelia'
+          'Argentina'
+          'Armenia'
+          'Aruba'
+          'Ashmore and Cartier Islands'
+          'Atlantic Ocean'
+          'Australia'
+          'Austria'
+          'Azerbaiy'#225'n'
+          'Bahamas'
+          'Bahr'#225'in'
+          'Bangladesh'
+          'Barbados'
+          'B'#233'lgica'
+          'Belice'
+          'Ben'#237'n'
+          'Bermudas'
+          'Bielorrusia'
+          'Birmania; Myanmar'
+          'Bolivia'
+          'Bosnia y Hercegovina'
+          'Botsuana'
+          'Brasil'
+          'Brun'#233'i'
+          'Bulgaria'
+          'Burkina Faso'
+          'Burundi'
+          'But'#225'n'
+          'Cabo Verde'
+          'Camboya'
+          'Camer'#250'n'
+          'Canad'#225
+          'Chad'
+          'Chile'
+          'China'
+          'Chipre'
+          'Clipperton Island'
+          'Colombia'
+          'Comoras'
+          'Congo'
+          'Coral Sea Islands'
+          'Corea del Norte'
+          'Corea del Sur'
+          'Costa de Marfil'
+          'Costa Rica'
+          'Croacia'
+          'Cuba'
+          'Dhekelia'
+          'Dinamarca'
+          'Dominica'
+          'Ecuador'
+          'Egipto'
+          'El Salvador'
+          'El Vaticano'
+          'Emiratos '#193'rabes Unidos'
+          'Eritrea'
+          'Eslovaquia'
+          'Eslovenia'
+          'Espa'#241'a'
+          'Estados Unidos'
+          'Estonia'
+          'Etiop'#237'a'
+          'Filipinas'
+          'Finlandia'
+          'Fiyi'
+          'Francia'
+          'Gab'#243'n'
+          'Gambia'
+          'Gaza Strip'
+          'Georgia'
+          'Ghana'
+          'Gibraltar'
+          'Granada'
+          'Grecia'
+          'Groenlandia'
+          'Guam'
+          'Guatemala'
+          'Guernsey'
+          'Guinea'
+          'Guinea Ecuatorial'
+          'Guinea-Bissau'
+          'Guyana'
+          'Hait'#237
+          'Honduras'
+          'Hong Kong'
+          'Hungr'#237'a'
+          'India'
+          'Indian Ocean'
+          'Indonesia'
+          'Ir'#225'n'
+          'Iraq'
+          'Irlanda'
+          'Isla Bouvet'
+          'Isla Christmas'
+          'Isla Norfolk'
+          'Islandia'
+          'Islas Caim'#225'n'
+          'Islas Cocos'
+          'Islas Cook'
+          'Islas Feroe'
+          'Islas Georgia del Sur y Sandwich del Sur'
+          'Islas Heard y McDonald'
+          'Islas Malvinas'
+          'Islas Marianas del Norte'
+          'Islas Marshall'
+          'Islas Pitcairn'
+          'Islas Salom'#243'n'
+          'Islas Turcas y Caicos'
+          'Islas V'#237'rgenes Americanas'
+          'Islas V'#237'rgenes Brit'#225'nicas'
+          'Israel'
+          'Italia'
+          'Jamaica'
+          'Jan Mayen'
+          'Jap'#243'n'
+          'Jersey'
+          'Jordania'
+          'Kazajist'#225'n'
+          'Kenia'
+          'Kirguizist'#225'n'
+          'Kiribati'
+          'Kuwait'
+          'Laos'
+          'Lesoto'
+          'Letonia'
+          'L'#237'bano'
+          'Liberia'
+          'Libia'
+          'Liechtenstein'
+          'Lituania'
+          'Luxemburgo'
+          'Macao'
+          'Macedonia'
+          'Madagascar'
+          'Malasia'
+          'Malaui'
+          'Maldivas'
+          'Mal'#237
+          'Malta'
+          'Man, Isle of'
+          'Marruecos'
+          'Mauricio'
+          'Mauritania'
+          'Mayotte'
+          'M'#233'xico'
+          'Micronesia'
+          'Moldavia'
+          'M'#243'naco'
+          'Mongolia'
+          'Montenegro'
+          'Montserrat'
+          'Mozambique'
+          'Mundo'
+          'Namibia'
+          'Nauru'
+          'Navassa Island'
+          'Nepal'
+          'Nicaragua'
+          'N'#237'ger'
+          'Nigeria'
+          'Niue'
+          'Noruega'
+          'Nueva Caledonia'
+          'Nueva Zelanda'
+          'Om'#225'n'
+          'Pacific Ocean'
+          'Pa'#237'ses Bajos'
+          'Pakist'#225'n'
+          'Palaos'
+          'Panam'#225
+          'Pap'#250'a-Nueva Guinea'
+          'Paracel Islands'
+          'Paraguay'
+          'Per'#250
+          'Polinesia Francesa'
+          'Polonia'
+          'Portugal'
+          'Puerto Rico'
+          'Qatar'
+          'Reino Unido'
+          'Rep'#250'blica Centroafricana'
+          'Rep'#250'blica Checa'
+          'Rep'#250'blica Democr'#225'tica del Congo'
+          'Rep'#250'blica Dominicana'
+          'Ruanda'
+          'Rumania'
+          'Rusia'
+          'S'#225'hara Occidental'
+          'Samoa'
+          'Samoa Americana'
+          'San Crist'#243'bal y Nieves'
+          'San Marino'
+          'San Pedro y Miquel'#243'n'
+          'San Vicente y las Granadinas'
+          'Santa Helena'
+          'Santa Luc'#237'a'
+          'Santo Tom'#233' y Pr'#237'ncipe'
+          'Senegal'
+          'Serbia'
+          'Seychelles'
+          'Sierra Leona'
+          'Singapur'
+          'Siria'
+          'Somalia'
+          'Southern Ocean'
+          'Spratly Islands'
+          'Sri Lanka'
+          'Suazilandia'
+          'Sud'#225'frica'
+          'Sud'#225'n'
+          'Suecia'
+          'Suiza'
+          'Surinam'
+          'Svalbard y Jan Mayen'
+          'Tailandia'
+          'Taiw'#225'n'
+          'Tanzania'
+          'Tayikist'#225'n'
+          'Territorio Brit'#225'nico del Oc'#233'ano Indico'
+          'Territorios Australes Franceses'
+          'Timor Oriental'
+          'Togo'
+          'Tokelau'
+          'Tonga'
+          'Trinidad y Tobago'
+          'T'#250'nez'
+          'Turkmenist'#225'n'
+          'Turqu'#237'a'
+          'Tuvalu'
+          'Ucrania'
+          'Uganda'
+          'Uni'#243'n Europea'
+          'Uruguay'
+          'Uzbekist'#225'n'
+          'Vanuatu'
+          'Venezuela'
+          'Vietnam'
+          'Wake Island'
+          'Wallis y Futuna'
+          'West Bank'
+          'Yemen'
+          'Yibuti'
+          'Zambia'
+          'Zimbabue')
+        Margins.Left = 8.000000000000000000
+        Margins.Top = 4.000000000000000000
+        Margins.Right = 8.000000000000000000
+        Position.X = 8.000000000000000000
+        Position.Y = 4.000000000000000000
+        Size.Width = 304.000000000000000000
+        Size.Height = 32.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 1
+      end
+    end
+    object lbiRecibirMails: TListBoxItem
+      ItemData.Detail = 'Recibir notificaciones (una al mes si es necesario)'
+      Position.Y = 174.000000000000000000
+      Size.Width = 320.000000000000000000
+      Size.Height = 58.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 3
+      object chkMails: TCheckBox
+        Align = Top
+        Margins.Left = 8.000000000000000000
+        Margins.Top = 4.000000000000000000
+        Margins.Right = 8.000000000000000000
+        Position.X = 8.000000000000000000
+        Position.Y = 4.000000000000000000
+        Size.Width = 304.000000000000000000
+        Size.Height = 54.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 1
+        Text = 'Recibir notificaci'#243'n y avisos de OEC Software u ITCmx'
+      end
+    end
+    object lbiComentarios: TListBoxItem
+      ItemData.Detail = 'Comentarios que quieras hacernos'
+      Position.Y = 232.000000000000000000
+      Size.Width = 320.000000000000000000
+      Size.Height = 192.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 4
+      object memComentario: TMemo
+        Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
+        DataDetectorTypes = []
+        Align = Client
+        Margins.Left = 8.000000000000000000
+        Margins.Top = 4.000000000000000000
+        Margins.Right = 8.000000000000000000
+        Margins.Bottom = 24.000000000000000000
+        Size.Width = 304.000000000000000000
+        Size.Height = 164.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 1
+        Viewport.Width = 296.000000000000000000
+        Viewport.Height = 156.000000000000000000
+      end
+    end
+  end
+end

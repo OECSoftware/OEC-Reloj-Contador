@@ -1,0 +1,126 @@
+object frmITCmxRegistro: TfrmITCmxRegistro
+  Left = 0
+  Top = 0
+  BorderIcons = [biSystemMenu]
+  BorderStyle = Single
+  Caption = 'Registrate en OEC Software'
+  ClientHeight = 480
+  ClientWidth = 320
+  Fill.Kind = Solid
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  DesignerMasterStyle = 0
+  object tbMain: TToolBar
+    Align = MostTop
+    Size.Width = 320.000000000000000000
+    Size.Height = 44.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    TintColor = claWhite
+    object recFondoToolBar: TRectangle
+      Align = Contents
+      Fill.Color = claWhite
+      Size.Width = 320.000000000000000000
+      Size.Height = 44.000000000000000000
+      Size.PlatformDefault = False
+      Stroke.Kind = None
+    end
+    object lblTitulo: TLabel
+      Align = Contents
+      StyledSettings = [Family, Size, Style]
+      Size.Width = 320.000000000000000000
+      Size.Height = 44.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'listboxheaderlabel'
+      TextSettings.FontColor = xFF2C3E50
+      TextSettings.HorzAlign = Center
+      Text = 'Registrarse'
+      TabOrder = 0
+    end
+    object sbtRegresar: TSpeedButton
+      Align = Left
+      ModalResult = 2
+      Size.Width = 80.000000000000000000
+      Size.Height = 44.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'backtoolbutton'
+      Text = 'Regresar'
+    end
+    object sbtEnviar: TSpeedButton
+      Align = Right
+      ModalResult = 1
+      Position.X = 248.000000000000000000
+      Size.Width = 72.000000000000000000
+      Size.Height = 44.000000000000000000
+      Size.PlatformDefault = False
+      Text = 'Enviar'
+    end
+  end
+  object lstRegistro: TListBox
+    Align = Client
+    Size.Width = 320.000000000000000000
+    Size.Height = 436.000000000000000000
+    Size.PlatformDefault = False
+    StyleLookup = 'transparentlistboxstyle'
+    TabOrder = 1
+    DisableFocusEffect = True
+    DefaultItemStyles.ItemStyle = 'listboxitembottomdetail'
+    DefaultItemStyles.GroupHeaderStyle = ''
+    DefaultItemStyles.GroupFooterStyle = ''
+    Viewport.Width = 320.000000000000000000
+    Viewport.Height = 436.000000000000000000
+    object lbiNombre: TListBoxItem
+      ItemData.Detail = 'Nombre'
+      Size.Width = 320.000000000000000000
+      Size.Height = 48.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      object Edit1: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        Align = Top
+        TabOrder = 1
+        Position.X = 8.000000000000000000
+        Position.Y = 4.000000000000000000
+        Margins.Left = 8.000000000000000000
+        Margins.Top = 4.000000000000000000
+        Margins.Right = 8.000000000000000000
+        Size.Width = 304.000000000000000000
+        Size.Height = 22.000000000000000000
+        Size.PlatformDefault = False
+      end
+    end
+    object lbiEMail: TListBoxItem
+      ItemData.Detail = 'Correo electr'#243'nico'
+      Position.Y = 48.000000000000000000
+      Size.Width = 320.000000000000000000
+      Size.Height = 48.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 1
+    end
+    object lbiPais: TListBoxItem
+      ItemData.Detail = 'Pais'
+      Position.Y = 96.000000000000000000
+      Size.Width = 320.000000000000000000
+      Size.Height = 48.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 2
+    end
+    object lbiRecibirMails: TListBoxItem
+      ItemData.Detail = 'Recibir notificaciones (una al mes si es necesario)'
+      Position.Y = 144.000000000000000000
+      Size.Width = 320.000000000000000000
+      Size.Height = 48.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 3
+    end
+    object lbiComentarios: TListBoxItem
+      ItemData.Detail = 'Comentarios que quieras hacernos'
+      Position.Y = 192.000000000000000000
+      Size.Width = 320.000000000000000000
+      Size.Height = 192.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 4
+    end
+  end
+end

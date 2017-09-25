@@ -1,0 +1,50 @@
+object fraReloj: TfraReloj
+  Size.Width = 320.000000000000000000
+  Size.Height = 240.000000000000000000
+  Size.PlatformDefault = False
+  OnResize = FrameResize
+  object lblReloj: TLabel
+    Align = Client
+    StyledSettings = [Family, Style]
+    Margins.Bottom = 14.000000000000000000
+    Size.Width = 290.000000000000000000
+    Size.Height = 198.000000000000000000
+    Size.PlatformDefault = False
+    StyleLookup = 'labelstyle'
+    TextSettings.Font.Size = 28.000000000000000000
+    TextSettings.FontColor = xFF27AE60
+    TextSettings.HorzAlign = Center
+    Text = '12:00 am'
+    TabOrder = 0
+  end
+  object lblZona: TLabel
+    Align = Bottom
+    StyledSettings = [Family, Style]
+    Position.Y = 212.000000000000000000
+    Size.Width = 320.000000000000000000
+    Size.Height = 28.000000000000000000
+    Size.PlatformDefault = False
+    TextSettings.Font.Size = 10.000000000000000000
+    TextSettings.FontColor = claGray
+    TextSettings.HorzAlign = Center
+    Text = 'lblZona'
+    TabOrder = 1
+  end
+  object Layout1: TLayout
+    Align = Right
+    Position.X = 290.000000000000000000
+    Size.Width = 30.000000000000000000
+    Size.Height = 212.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 2
+    object sbtQuitar: TSpeedButton
+      Align = Center
+      Size.Width = 30.000000000000000000
+      Size.Height = 22.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'stoptoolbutton'
+      Text = 'Quitar'
+      OnClick = sbtQuitarClick
+    end
+  end
+end

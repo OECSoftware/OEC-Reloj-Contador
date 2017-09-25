@@ -1,0 +1,20 @@
+program appOECRelojContador;
+
+uses
+  System.StartUpCopy,
+  FMX.Forms,
+  fMain in 'fMain.pas' {frmMain},
+  fReloj in 'fReloj.pas' {fraReloj: TFrame},
+  uGral in 'uGral.pas',
+  tReloj in 'tReloj.pas',
+  fSeleccionarZonaHoraria in 'fSeleccionarZonaHoraria.pas' {frmZonaHoraria},
+  fContador in 'fContador.pas' {fraContador: TFrame},
+  TContador in 'TContador.pas';
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.CreateForm(TfrmMain, frmMain);
+  Application.Run;
+end.

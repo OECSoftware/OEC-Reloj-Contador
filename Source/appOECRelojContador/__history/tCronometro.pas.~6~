@@ -1,0 +1,48 @@
+unit tCronometro;
+
+interface
+
+uses
+  FMX.Types,
+  System.Classes;
+
+type
+  TThreadCronometro = class(TThread)
+  private
+    FtmrReloj:TTimer;
+    FOnTimer: TNotifyEvent;
+
+    procedure Timer(Sender:TObject);
+  protected
+    procedure Execute; override;
+  public
+    property OnTimer:TNotifyEvent read FOnTimer write FOnTimer;
+
+    procedure Pausa;
+    procedure Continuar;
+  end;
+
+implementation
+
+{ TCronometro }
+
+procedure TThreadCronometro.Continuar;
+begin
+
+end;
+
+procedure TThreadCronometro.Execute;
+begin
+end;
+
+procedure TThreadCronometro.Pausa;
+begin
+
+end;
+
+procedure TThreadCronometro.Timer(Sender: TObject);
+begin
+
+end;
+
+end.

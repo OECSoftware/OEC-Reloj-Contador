@@ -1,0 +1,35 @@
+unit fSeleccionarZonaHoraria;
+
+interface
+
+uses
+  System.SysUtils, System.Types, System.UITypes, System.Classes, System.Variants,
+  FMX.Types, FMX.Controls, FMX.Forms, FMX.Graphics, FMX.Dialogs, FMX.StdCtrls,
+  FMX.Objects, FMX.Controls.Presentation, FMX.Layouts, FMX.ListBox;
+
+type
+  TfrmZonaHoraria = class(TForm)
+    tbMain: TToolBar;
+    recFondoToolBar: TRectangle;
+    lblTitulo: TLabel;
+    sbtRegresar: TSpeedButton;
+    sbtGuardar: TSpeedButton;
+    lstZona: TListBox;
+    procedure FormClose(Sender: TObject; var Action: TCloseAction);
+  private
+  public
+  end;
+
+var
+  frmZonaHoraria: TfrmZonaHoraria;
+
+implementation
+
+{$R *.fmx}
+
+procedure TfrmZonaHoraria.FormClose(Sender: TObject; var Action: TCloseAction);
+begin
+Action := TCloseAction.caFree;
+end;
+
+end.

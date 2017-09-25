@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2016/06/23 11:57:07.000.131,=C:\Users\Mac\Documents\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>2017/06/28 20:12:40.000.326,=C:\Users\Mac\Documents\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>2017/09/09 08:42:42.000.798,=C:\Users\Mac\Documents\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>2017/09/09 08:44:15.000.133,D:\Mis Proyectos\Reloj Contador\Source\appOECRelojContador\fMain.fmx=C:\Users\Mac\Documents\Embarcadero\Studio\Projects\Unit2.fmx</Transaction>
+    <Transaction>2017/09/09 08:44:15.000.133,D:\Mis Proyectos\Reloj Contador\Source\appOECRelojContador\fMain.pas=C:\Users\Mac\Documents\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>2017/09/09 08:44:18.000.499,D:\Mis Proyectos\Reloj Contador\Source\appOECRelojContador\appOECRelojContador.dproj=C:\Users\Mac\Documents\Embarcadero\Studio\Projects\Project2.dproj</Transaction>
+    <Transaction>2017/09/09 09:40:07.000.608,=D:\Mis Proyectos\Reloj Contador\Source\appOECRelojContador\Unit1.pas</Transaction>
+    <Transaction>2017/09/09 09:42:00.000.132,D:\Mis Proyectos\Reloj Contador\Source\appOECRelojContador\fReloj.pas=D:\Mis Proyectos\Reloj Contador\Source\appOECRelojContador\Unit1.pas</Transaction>
+    <Transaction>2017/09/09 09:42:00.000.132,D:\Mis Proyectos\Reloj Contador\Source\appOECRelojContador\fReloj.fmx=D:\Mis Proyectos\Reloj Contador\Source\appOECRelojContador\Unit1.fmx</Transaction>
+    <Transaction>2017/09/09 09:46:58.000.821,=D:\Mis Proyectos\Reloj Contador\Source\appOECRelojContador\Unit1.pas</Transaction>
+    <Transaction>2017/09/09 09:47:02.000.494,D:\Mis Proyectos\Reloj Contador\Source\appOECRelojContador\uGral.pas=D:\Mis Proyectos\Reloj Contador\Source\appOECRelojContador\Unit1.pas</Transaction>
+    <Transaction>2017/09/09 17:44:44.000.009,=D:\Mis Proyectos\Reloj Contador\Source\appOECRelojContador\Unit1.pas</Transaction>
+    <Transaction>2017/09/09 18:11:32.000.012,D:\Mis Proyectos\Reloj Contador\Source\appOECRelojContador\Unit1.pas=D:\Mis Proyectos\Reloj Contador\Source\appOECRelojContador\tReloj.pas</Transaction>
+    <Transaction>2017/09/09 18:31:58.000.494,=D:\Mis Proyectos\Reloj Contador\Source\appOECRelojContador\Unit1.pas</Transaction>
+    <Transaction>2017/09/09 18:35:12.000.505,D:\Mis Proyectos\Reloj Contador\Source\appOECRelojContador\Unit1.pas=D:\Mis Proyectos\Reloj Contador\Source\appOECRelojContador\fSeleccionarZonaHoraria.pas</Transaction>
+    <Transaction>2017/09/09 18:35:12.000.505,D:\Mis Proyectos\Reloj Contador\Source\appOECRelojContador\Unit1.fmx=D:\Mis Proyectos\Reloj Contador\Source\appOECRelojContador\fSeleccionarZonaHoraria.fmx</Transaction>
+    <Transaction>2017/09/09 21:34:13.000.174,=D:\Mis Proyectos\Reloj Contador\Source\appOECRelojContador\Unit1.pas</Transaction>
+    <Transaction>2017/09/09 21:36:13.000.961,D:\Mis Proyectos\Reloj Contador\Source\appOECRelojContador\Unit1.fmx=D:\Mis Proyectos\Reloj Contador\Source\appOECRelojContador\fContador.fmx</Transaction>
+    <Transaction>2017/09/09 21:36:13.000.961,D:\Mis Proyectos\Reloj Contador\Source\appOECRelojContador\Unit1.pas=D:\Mis Proyectos\Reloj Contador\Source\appOECRelojContador\fContador.pas</Transaction>
+    <Transaction>2017/09/09 21:44:51.000.198,=D:\Mis Proyectos\Reloj Contador\Source\appOECRelojContador\Unit1.pas</Transaction>
+    <Transaction>2017/09/09 21:45:29.000.994,D:\Mis Proyectos\Reloj Contador\Source\appOECRelojContador\Unit1.pas=D:\Mis Proyectos\Reloj Contador\Source\appOECRelojContador\TContador.pas</Transaction>
+    <Transaction>2017/09/09 22:03:14.000.553,=D:\Mis Proyectos\Reloj Contador\Source\appOECRelojContador\Unit1.pas</Transaction>
+    <Transaction>2017/09/09 22:06:30.000.624,D:\Mis Proyectos\Reloj Contador\Source\appOECRelojContador\Unit1.pas=D:\Mis Proyectos\Reloj Contador\Source\appOECRelojContador\fSeleccionarContador.pas</Transaction>
+    <Transaction>2017/09/09 22:06:30.000.624,D:\Mis Proyectos\Reloj Contador\Source\appOECRelojContador\Unit1.fmx=D:\Mis Proyectos\Reloj Contador\Source\appOECRelojContador\fSeleccionarContador.fmx</Transaction>
+    <Transaction>2017/09/17 22:18:34.000.773,=D:\Mis Proyectos\Reloj Contador\Source\appOECRelojContador\Unit1.pas</Transaction>
+    <Transaction>2017/09/23 10:42:16.000.303,=D:\Mis Proyectos\Reloj Contador\Source\appOECRelojContador\Unit1.pas</Transaction>
+    <Transaction>2017/09/23 10:42:31.000.959,D:\Mis Proyectos\Reloj Contador\Source\appOECRelojContador\Unit1.pas=D:\Mis Proyectos\Reloj Contador\Source\appOECRelojContador\fCronometro.pas</Transaction>
+    <Transaction>2017/09/23 10:42:31.000.959,D:\Mis Proyectos\Reloj Contador\Source\appOECRelojContador\Unit1.fmx=D:\Mis Proyectos\Reloj Contador\Source\appOECRelojContador\fCronometro.fmx</Transaction>
+    <Transaction>2017/09/23 10:45:28.000.146,=D:\Mis Proyectos\Reloj Contador\Source\appOECRelojContador\Unit1.pas</Transaction>
+    <Transaction>2017/09/23 10:46:13.000.315,D:\Mis Proyectos\Reloj Contador\Source\appOECRelojContador\Unit1.pas=D:\Mis Proyectos\Reloj Contador\Source\appOECRelojContador\tCronometro.pas</Transaction>
+    <Transaction>2017/09/23 11:05:21.000.732,=D:\Mis Proyectos\Reloj Contador\Source\appOECRelojContador\Unit1.pas</Transaction>
+    <Transaction>2017/09/23 11:05:58.000.620,D:\Mis Proyectos\Reloj Contador\Source\appOECRelojContador\Unit1.fmx=D:\Mis Proyectos\Reloj Contador\Source\appOECRelojContador\fMensaje.fmx</Transaction>
+    <Transaction>2017/09/23 11:05:58.000.620,D:\Mis Proyectos\Reloj Contador\Source\appOECRelojContador\Unit1.pas=D:\Mis Proyectos\Reloj Contador\Source\appOECRelojContador\fMensaje.pas</Transaction>
+    <Transaction>2017/09/23 11:20:14.000.327,=D:\Mis Proyectos\Reloj Contador\Source\appOECRelojContador\Unit1.pas</Transaction>
+    <Transaction>2017/09/23 11:23:04.000.396,D:\Mis Proyectos\Reloj Contador\Source\appOECRelojContador\Unit1.fmx=D:\Mis Proyectos\Reloj Contador\Source\appOECRelojContador\fITCmxRegistro.fmx</Transaction>
+    <Transaction>2017/09/23 11:23:04.000.396,D:\Mis Proyectos\Reloj Contador\Source\appOECRelojContador\Unit1.pas=D:\Mis Proyectos\Reloj Contador\Source\appOECRelojContador\fITCmxRegistro.pas</Transaction>
+    <Transaction>2017/09/24 21:28:55.000.740,=D:\Mis Proyectos\Reloj Contador\Source\appOECRelojContador\ClientClassesUnit1.pas</Transaction>
+    <Transaction>2017/09/24 21:28:57.000.209,=D:\Mis Proyectos\Reloj Contador\Source\appOECRelojContador\ClientModuleUnit1.pas</Transaction>
+    <Transaction>2017/09/24 21:32:39.000.782,D:\Mis Proyectos\Reloj Contador\Source\appOECRelojContador\uITCmxStatistics.pas=D:\Mis Proyectos\Reloj Contador\Source\appOECRelojContador\ClientClassesUnit1.pas</Transaction>
+    <Transaction>2017/09/24 21:35:11.000.579,D:\Mis Proyectos\Reloj Contador\Source\appOECRelojContador\cITCmxStatistics.pas=D:\Mis Proyectos\Reloj Contador\Source\appOECRelojContador\ClientModuleUnit1.pas</Transaction>
+    <Transaction>2017/09/24 21:35:11.000.579,D:\Mis Proyectos\Reloj Contador\Source\appOECRelojContador\cITCmxStatistics.dfm=D:\Mis Proyectos\Reloj Contador\Source\appOECRelojContador\ClientModuleUnit1.dfm</Transaction>
+    <Transaction>2017/09/24 21:38:34.000.901,=D:\Mis Proyectos\ITCmxStadistics\uStatistics.pas</Transaction>
+  </Transactions>
+	<ActiveMobileDevice>
+		<POscarMacVirtual iOSSimulator="_iossimulator_44EBCF37-3061-4DC2-B724-469067E2D1B7"/>
+		<POscarOSX iOSSimulator="iPhone5"/>  <NoProfile Android="8c5fe4d6"/>
+  </ActiveMobileDevice>
+	<BT_BuildType>Debug</BT_BuildType>
+</BorlandProject>

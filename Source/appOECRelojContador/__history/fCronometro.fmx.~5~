@@ -1,0 +1,42 @@
+object fraCronometro: TfraCronometro
+  Size.Width = 320.000000000000000000
+  Size.Height = 50.000000000000000000
+  Size.PlatformDefault = False
+  object lblContador: TLabel
+    Align = Contents
+    StyledSettings = [Family, Style]
+    HitTest = True
+    Size.Width = 320.000000000000000000
+    Size.Height = 50.000000000000000000
+    Size.PlatformDefault = False
+    StyleLookup = 'labelstyle'
+    TextSettings.Font.Size = 28.000000000000000000
+    TextSettings.FontColor = xFFE74C3C
+    TextSettings.HorzAlign = Center
+    Text = '00:00:00'
+    TabOrder = 0
+  end
+  object layQuitar: TLayout
+    Align = MostRight
+    Position.X = 290.000000000000000000
+    Size.Width = 30.000000000000000000
+    Size.Height = 50.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 2
+    object sbtQuitar: TSpeedButton
+      Align = Center
+      Size.Width = 30.000000000000000000
+      Size.Height = 22.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'stoptoolbutton'
+      Text = 'Quitar'
+    end
+  end
+  object sbtIniciar: TSpeedButton
+    Align = MostLeft
+    Size.Width = 50.000000000000000000
+    Size.Height = 50.000000000000000000
+    Size.PlatformDefault = False
+    StyleLookup = 'playtoolbutton'
+  end
+end

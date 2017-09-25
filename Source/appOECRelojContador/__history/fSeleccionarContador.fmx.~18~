@@ -1,0 +1,141 @@
+object frmSeleccionarContador: TfrmSeleccionarContador
+  Left = 0
+  Top = 0
+  BorderStyle = None
+  Caption = 'Contador'
+  ClientHeight = 310
+  ClientWidth = 320
+  Fill.Kind = Solid
+  Position = OwnerFormCenter
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  DesignerMasterStyle = 0
+  object tbMain: TToolBar
+    Align = MostTop
+    Size.Width = 320.000000000000000000
+    Size.Height = 44.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    TintColor = claWhite
+    object recFondoToolBar: TRectangle
+      Align = Contents
+      Fill.Color = claWhite
+      Size.Width = 320.000000000000000000
+      Size.Height = 44.000000000000000000
+      Size.PlatformDefault = False
+      Stroke.Kind = None
+    end
+    object lblTitulo: TLabel
+      Align = Contents
+      StyledSettings = [Family, Size, Style]
+      Size.Width = 320.000000000000000000
+      Size.Height = 44.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'listboxheaderlabel'
+      TextSettings.FontColor = xFF2C3E50
+      TextSettings.HorzAlign = Center
+      Text = 'Contador'
+      TabOrder = 0
+    end
+    object sbtRegresar: TSpeedButton
+      Align = Left
+      ModalResult = 2
+      Size.Width = 80.000000000000000000
+      Size.Height = 44.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'backtoolbutton'
+      Text = 'Regresar'
+    end
+    object sbtGuardar: TSpeedButton
+      Align = Right
+      ModalResult = 1
+      Position.X = 276.000000000000000000
+      Size.Width = 44.000000000000000000
+      Size.Height = 44.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'addtoolbutton'
+      Text = 'Guardar'
+      OnClick = sbtGuardarClick
+    end
+  end
+  object edDescripcion: TEdit
+    Touch.InteractiveGestures = [LongTap, DoubleTap]
+    Align = Top
+    StyleLookup = 'editstyle'
+    TabOrder = 1
+    Position.X = 3.000000000000000000
+    Position.Y = 50.000000000000000000
+    Margins.Left = 3.000000000000000000
+    Margins.Top = 6.000000000000000000
+    Margins.Right = 3.000000000000000000
+    Margins.Bottom = 9.000000000000000000
+    Size.Width = 314.000000000000000000
+    Size.Height = 30.000000000000000000
+    Size.PlatformDefault = False
+    TextPrompt = 'Descripcion'
+  end
+  object Tiempo: TLabel
+    Align = Top
+    Margins.Left = 3.000000000000000000
+    Margins.Right = 3.000000000000000000
+    Margins.Bottom = 3.000000000000000000
+    Position.X = 3.000000000000000000
+    Position.Y = 89.000000000000000000
+    Size.Width = 314.000000000000000000
+    Size.Height = 17.000000000000000000
+    Size.PlatformDefault = False
+    StyleLookup = 'listboxitemdetaillabel'
+    Text = 'Tiempo'
+    TabOrder = 2
+  end
+  object spi: TTMSFMXSpinner
+    Align = Top
+    ClipChildren = True
+    Margins.Left = 3.000000000000000000
+    Margins.Right = 3.000000000000000000
+    Position.X = 3.000000000000000000
+    Position.Y = 109.000000000000000000
+    TabOrder = 3
+    Size.Width = 314.000000000000000000
+    Size.Height = 180.000000000000000000
+    Size.PlatformDefault = False
+    AdaptToStyle = True
+    Columns = <
+      item
+        RangeTo = 24.000000000000000000
+        DateRangeFrom = 42988.977522743060000000
+        DateRangeTo = 43008.977522743060000000
+        Step = 1.000000000000000000
+        SelectedValue = 1.000000000000000000
+        ValueFormat = '%g'
+        DateTimeValueFormat = 'dd/mm/yy'
+        Font.Size = 18.000000000000000000
+        Font.StyleExt = {00070000000000000004000000}
+        CustomItems = <>
+      end
+      item
+        RangeTo = 60.000000000000000000
+        DateRangeFrom = 42988.977522743060000000
+        DateRangeTo = 43008.977522743060000000
+        Step = 1.000000000000000000
+        ValueFormat = '%g'
+        DateTimeValueFormat = 'dd/mm/yy'
+        Font.Size = 18.000000000000000000
+        Font.StyleExt = {00070000000000000004000000}
+        CustomItems = <>
+      end
+      item
+        RangeTo = 60.000000000000000000
+        DateRangeFrom = 42988.977522743060000000
+        DateRangeTo = 43008.977522743060000000
+        Step = 1.000000000000000000
+        ValueFormat = '%g'
+        DateTimeValueFormat = 'dd/mm/yy'
+        Font.Size = 18.000000000000000000
+        Font.StyleExt = {00070000000000000004000000}
+        CustomItems = <>
+      end>
+    OnSelectedValueChanged = spiSelectedValueChanged
+  end
+end

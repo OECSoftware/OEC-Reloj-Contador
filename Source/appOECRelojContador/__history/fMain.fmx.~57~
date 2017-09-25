@@ -1,0 +1,287 @@
+object frmMain: TfrmMain
+  Left = 0
+  Top = 0
+  BorderIcons = [biSystemMenu, biMinimize]
+  BorderStyle = SizeToolWin
+  Caption = 'Reloj - Contador'
+  ClientHeight = 480
+  ClientWidth = 320
+  Position = ScreenCenter
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnShow = FormShow
+  DesignerMasterStyle = 0
+  object lstItems: TListBox
+    Align = Client
+    Margins.Top = 100.000000000000000000
+    Margins.Bottom = 50.000000000000000000
+    Size.Width = 320.000000000000000000
+    Size.Height = 330.000000000000000000
+    Size.PlatformDefault = False
+    StyleLookup = 'transparentlistboxstyle'
+    TabOrder = 1
+    DisableFocusEffect = True
+    ItemHeight = 70.000000000000000000
+    DefaultItemStyles.ItemStyle = ''
+    DefaultItemStyles.GroupHeaderStyle = ''
+    DefaultItemStyles.GroupFooterStyle = ''
+    MultiSelectStyle = Extended
+    Viewport.Width = 320.000000000000000000
+    Viewport.Height = 330.000000000000000000
+  end
+  object tbMain: TToolBar
+    Align = None
+    Size.Width = 320.000000000000000000
+    Size.Height = 50.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    TintColor = claWhite
+    object recFondoToolBar: TRectangle
+      Align = Contents
+      Fill.Color = claWhite
+      Size.Width = 320.000000000000000000
+      Size.Height = 50.000000000000000000
+      Size.PlatformDefault = False
+      Stroke.Kind = None
+    end
+    object lblTitulo: TLabel
+      Align = Contents
+      StyledSettings = [Family, Size, Style]
+      Size.Width = 320.000000000000000000
+      Size.Height = 50.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'listboxheaderlabel'
+      TextSettings.FontColor = xFF2C3E50
+      TextSettings.HorzAlign = Center
+      Text = 'Reloj - Contador'
+      TabOrder = 0
+    end
+  end
+  object sbtMenu: TSpeedButton
+    IconTintColor = xFF2C3E50
+    Size.Width = 48.000000000000000000
+    Size.Height = 48.000000000000000000
+    Size.PlatformDefault = False
+    StyleLookup = 'drawertoolbutton'
+  end
+  inline fraReloj: TfraReloj
+    Locked = True
+    Position.Y = 50.000000000000000000
+    Size.Width = 320.000000000000000000
+    Size.Height = 50.000000000000000000
+    Size.PlatformDefault = False
+    inherited layQuitar: TLayout
+      inherited sbtQuitar: TSpeedButton
+        Size.Width = 48.000000000000000000
+        Size.Height = 48.000000000000000000
+      end
+    end
+  end
+  object sbtEstadisticas: TSpeedButton
+    Margins.Left = 3.000000000000000000
+    Margins.Top = 3.000000000000000000
+    Margins.Right = 3.000000000000000000
+    Margins.Bottom = 3.000000000000000000
+    Position.X = 3.000000000000000000
+    Position.Y = 429.000000000000000000
+    Size.Width = 314.000000000000000000
+    Size.Height = 48.000000000000000000
+    Size.PlatformDefault = False
+    Text = 
+      'Se envia un "bit" para estadisticas. Ver nuestra Politica de Pri' +
+      'vacidad'
+  end
+  object mvwMain: TMultiView
+    DrawerOptions.DurationSliding = 0.150000005960464500
+    MasterButton = sbtMenu
+    Mode = Drawer
+    Size.Width = 250.000000000000000000
+    Size.Height = 480.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 2
+    object recFondoMenu: TRectangle
+      Align = Contents
+      Fill.Color = claWhite
+      Locked = True
+      Size.Width = 250.000000000000000000
+      Size.Height = 480.000000000000000000
+      Size.PlatformDefault = False
+      Stroke.Kind = None
+    end
+    object recAgregar: TRectangle
+      Align = Top
+      Fill.Color = xFF27AE60
+      Margins.Left = 8.000000000000000000
+      Margins.Top = 8.000000000000000000
+      Margins.Right = 8.000000000000000000
+      Margins.Bottom = 8.000000000000000000
+      Position.X = 8.000000000000000000
+      Position.Y = 8.000000000000000000
+      Size.Width = 234.000000000000000000
+      Size.Height = 50.000000000000000000
+      Size.PlatformDefault = False
+      Stroke.Kind = None
+      object sbtReloj: TSpeedButton
+        Align = VertCenter
+        StyledSettings = [Family, Style]
+        Margins.Left = 1.000000000000000000
+        Margins.Top = 1.000000000000000000
+        Margins.Right = 1.000000000000000000
+        Margins.Bottom = 1.000000000000000000
+        Position.X = 1.000000000000000000
+        Position.Y = 1.000000000000000000
+        Size.Width = 232.000000000000000000
+        Size.Height = 48.000000000000000000
+        Size.PlatformDefault = False
+        Text = 'Agregar reloj'
+        TextSettings.Font.Size = 22.000000000000000000
+        TextSettings.FontColor = xFFECF0F1
+        TintColor = xFFECF0F1
+        OnClick = sbtRelojClick
+      end
+    end
+    object recContador: TRectangle
+      Align = Top
+      Fill.Color = xFFC0392B
+      Margins.Left = 8.000000000000000000
+      Margins.Top = 8.000000000000000000
+      Margins.Right = 8.000000000000000000
+      Margins.Bottom = 8.000000000000000000
+      Position.X = 8.000000000000000000
+      Position.Y = 74.000000000000000000
+      Size.Width = 234.000000000000000000
+      Size.Height = 50.000000000000000000
+      Size.PlatformDefault = False
+      Stroke.Kind = None
+      object sbtContador: TSpeedButton
+        Align = VertCenter
+        StyledSettings = [Family, Style]
+        Margins.Left = 1.000000000000000000
+        Margins.Top = 1.000000000000000000
+        Margins.Right = 1.000000000000000000
+        Margins.Bottom = 1.000000000000000000
+        Position.X = 1.000000000000000000
+        Position.Y = 1.000000000000000000
+        Size.Width = 232.000000000000000000
+        Size.Height = 48.000000000000000000
+        Size.PlatformDefault = False
+        Text = 'Agregar contador'
+        TextSettings.Font.Size = 22.000000000000000000
+        TextSettings.FontColor = xFFECF0F1
+        TintColor = xFFECF0F1
+        OnClick = sbtContadorClick
+      end
+    end
+    object recAgregarCronometro: TRectangle
+      Align = Top
+      Fill.Color = xFF2980B9
+      Margins.Left = 8.000000000000000000
+      Margins.Top = 8.000000000000000000
+      Margins.Right = 8.000000000000000000
+      Margins.Bottom = 8.000000000000000000
+      Position.X = 8.000000000000000000
+      Position.Y = 140.000000000000000000
+      Size.Width = 234.000000000000000000
+      Size.Height = 50.000000000000000000
+      Size.PlatformDefault = False
+      Stroke.Kind = None
+      object sbtCronometro: TSpeedButton
+        Align = VertCenter
+        StyledSettings = [Family, Style]
+        Margins.Left = 1.000000000000000000
+        Margins.Top = 1.000000000000000000
+        Margins.Right = 1.000000000000000000
+        Margins.Bottom = 1.000000000000000000
+        Position.X = 1.000000000000000000
+        Position.Y = 1.000000000000000000
+        Size.Width = 232.000000000000000000
+        Size.Height = 48.000000000000000000
+        Size.PlatformDefault = False
+        Text = 'Agregar cronometro'
+        TextSettings.Font.Size = 22.000000000000000000
+        TextSettings.FontColor = xFFECF0F1
+        TintColor = xFFECF0F1
+        OnClick = sbtCronometroClick
+      end
+    end
+    object recMensaje: TRectangle
+      Align = Bottom
+      Fill.Color = xFFECF0F1
+      Margins.Left = 8.000000000000000000
+      Margins.Top = 8.000000000000000000
+      Margins.Right = 8.000000000000000000
+      Margins.Bottom = 8.000000000000000000
+      Position.X = 8.000000000000000000
+      Position.Y = 332.000000000000000000
+      Size.Width = 234.000000000000000000
+      Size.Height = 50.000000000000000000
+      Size.PlatformDefault = False
+      Stroke.Kind = None
+      object sbtEnviarMensaje: TSpeedButton
+        Align = VertCenter
+        StyledSettings = [Family, Style]
+        Margins.Left = 1.000000000000000000
+        Margins.Top = 1.000000000000000000
+        Margins.Right = 1.000000000000000000
+        Margins.Bottom = 1.000000000000000000
+        Position.X = 1.000000000000000000
+        Position.Y = 1.000000000000000000
+        Size.Width = 232.000000000000000000
+        Size.Height = 48.000000000000000000
+        Size.PlatformDefault = False
+        Text = 'Enviar mensaje'
+        TextSettings.Font.Size = 22.000000000000000000
+        TextSettings.FontColor = xFF2C3E50
+        TintColor = xFFECF0F1
+        OnClick = sbtEnviarMensajeClick
+      end
+    end
+    object recRegistro: TRectangle
+      Align = Bottom
+      Fill.Color = xFFECF0F1
+      Margins.Left = 8.000000000000000000
+      Margins.Top = 8.000000000000000000
+      Margins.Right = 8.000000000000000000
+      Margins.Bottom = 8.000000000000000000
+      Position.X = 8.000000000000000000
+      Position.Y = 398.000000000000000000
+      Size.Width = 234.000000000000000000
+      Size.Height = 50.000000000000000000
+      Size.PlatformDefault = False
+      Stroke.Kind = None
+      object sbtRegistro: TSpeedButton
+        Align = VertCenter
+        StyledSettings = [Family, Style]
+        Margins.Left = 1.000000000000000000
+        Margins.Top = 1.000000000000000000
+        Margins.Right = 1.000000000000000000
+        Margins.Bottom = 1.000000000000000000
+        Position.X = 1.000000000000000000
+        Position.Y = 1.000000000000000000
+        Size.Width = 232.000000000000000000
+        Size.Height = 48.000000000000000000
+        Size.PlatformDefault = False
+        Text = 'Registra tu App'
+        TextSettings.Font.Size = 22.000000000000000000
+        TextSettings.FontColor = xFF2C3E50
+        TintColor = xFFECF0F1
+        OnClick = sbtRegistroClick
+      end
+    end
+    object lblAcercade: TLabel
+      Align = MostBottom
+      StyledSettings = [Family, Size, Style]
+      HitTest = True
+      Margins.Right = 8.000000000000000000
+      Position.Y = 456.000000000000000000
+      Size.Width = 242.000000000000000000
+      Size.Height = 24.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.FontColor = xFF2980B9
+      TextSettings.HorzAlign = Trailing
+      Text = 'Acerca de OEC Reloj - Contador'
+      TabOrder = 6
+    end
+  end
+end

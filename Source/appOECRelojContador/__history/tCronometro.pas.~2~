@@ -1,0 +1,25 @@
+unit tCronometro;
+
+interface
+
+uses
+  System.Classes;
+
+type
+  TThreadCronometro = class(TThread)
+  private
+    { Private declarations }
+  protected
+    procedure Execute; override;
+  end;
+
+implementation
+
+{ TCronometro }
+
+procedure TThreadCronometro.Execute;
+begin
+  { Place thread code here }
+end;
+
+end.

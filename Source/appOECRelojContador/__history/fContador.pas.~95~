@@ -1,0 +1,216 @@
+unit fContador;
+
+interface
+
+uses
+  tContador,
+  System.SysUtils, System.Types, System.UITypes, System.Classes, System.Variants,
+  FMX.Types, FMX.Graphics, FMX.Controls, FMX.Forms, FMX.Dialogs, FMX.StdCtrls,
+  FMX.Layouts, FMX.Controls.Presentation;
+
+type
+  TfraContador = class(TFrame)
+    lblContador: TLabel;
+    lblOriginal: TLabel;
+    layQuitar: TLayout;
+    sbtQuitar: TSpeedButton;
+    sbtReiniciar: TSpeedButton;
+    procedure sbtQuitarClick(Sender: TObject);
+    procedure sbtReiniciarClick(Sender: TObject);
+  private
+    tContador:TThreadContador;
+    FDeteniendo: Boolean;
+    FMinutos: integer;
+    FTotalSegundos: integer;
+    FSegundos: integer;
+    FHoras: integer;
+    FActual:Integer;
+    FDescripcion: string;
+
+    procedure SetOriginal;
+
+    procedure Alarma;
+
+    procedure onReloj(Sender:TObject);
+    procedure setHoras(const Value: integer);
+    procedure setMinutos(const Value: integer);
+    procedure setSegundos(const Value: integer);
+    procedure setTotalSegundos(const Value: integer);
+    function getQuitarVisible: boolean;
+    procedure setQuitarVisible(const Value: boolean);
+    procedure setDescripcion(const Value: string);
+  public
+    constructor Create(AOwner:TComponent); override;
+    destructor Destroy; override;
+
+    procedure Detener;
+    property Deteniendo:Boolean Read FDeteniendo;
+
+    property TotalSegundos:integer read FTotalSegundos write setTotalSegundos;
+
+    property Horas:integer read FHoras write setHoras;
+    property Minutos:integer read FMinutos write setMinutos;
+    property Segundos:integer read FSegundos write setSegundos;
+
+    property QuitarVisible:boolean read getQuitarVisible write setQuitarVisible;
+
+    property Descripcion:string read FDescripcion write setDescripcion;
+
+    procedure Iniciar;
+    procedure Reiniciar;
+
+    procedure Msg(AMsg:string);
+  end;
+
+implementation
+
+{$R *.fmx}
+
+uses
+  FMX.DialogService.Async;
+
+{ TfraContador }
+
+procedure TfraContador.Alarma;
+begin
+lblOriginal.Text := Format('%s ha terminado (%s:%s:%s)', [FDescripcion,
+  FormatFloat(',00', FHoras), FormatFloat('00', FMinutos),
+  FormatFloat('00', FSegundos)]);
+Msg(Format('%s se ha detenido', [Descripcion]));
+tContador.Pausa;
+sbtReiniciar.Enabled := True;
+end;
+
+constructor TfraContador.Create(AOwner: TComponent);
+begin
+inherited Create(AOwner);
+Height := 50;
+Anchors := [TAnchorKind.akLeft, TAnchorKind.akTop, TAnchorKind.akRight];
+
+FDeteniendo := False;
+
+tContador := TThreadContador.Create(True);
+tContador.FreeOnTerminate := True;
+tContador.OnTimer := onReloj;
+
+FMinutos := 0;
+FTotalSegundos := 0;
+FSegundos := 0;
+FHoras := 0;
+FActual := 0;
+end;
+
+destructor TfraContador.Destroy;
+begin
+Detener;
+
+inherited Destroy;
+end;
+
+procedure TfraContador.Detener;
+begin
+FDeteniendo := True;
+tContador.OnTimer := nil;
+tContador.Terminate;
+
+sbtReiniciar.Enabled := True;
+end;
+
+function TfraContador.getQuitarVisible: boolean;
+begin
+Result := sbtQuitar.Visible;
+end;
+
+procedure TfraContador.Iniciar;
+begin
+onReloj(nil);
+tContador.Start;
+end;
+
+procedure TfraContador.Msg(AMsg: string);
+begin
+FMX.DialogService.Async.TDialogServiceAsync.ShowMessage(AMsg)
+end;
+
+procedure TfraContador.onReloj(Sender: TObject);
+var
+  horas, minutos, segundos: Integer;
+begin
+FActual := FActual - 1;
+if Assigned(lblContador) then begin
+  segundos := FActual;
+  horas :=  segundos div 3600;
+  minutos := segundos div 60 mod 60;
+  segundos := segundos mod 60;
+  lblContador.Text := Format('%s:%s:%s', [FormatFloat(',00', horas),
+    FormatFloat('00', minutos), FormatFloat('00', segundos)]);
+end;
+
+if FActual <= 0 then begin
+  Alarma;
+  //Detener;
+end; {if}
+end;
+
+procedure TfraContador.Reiniciar;
+begin
+sbtReiniciar.Enabled := False;
+FActual := TotalSegundos;
+FDeteniendo := False;
+tContador.Continuar;
+end;
+
+procedure TfraContador.sbtQuitarClick(Sender: TObject);
+begin
+Detener;
+Owner.DisposeOf;
+end;
+
+procedure TfraContador.sbtReiniciarClick(Sender: TObject);
+begin
+Reiniciar;
+end;
+
+procedure TfraContador.setDescripcion(const Value: string);
+begin
+FDescripcion := Value;
+SetOriginal;
+end;
+
+procedure TfraContador.setHoras(const Value: integer);
+begin
+  FHoras := Value;
+  SetOriginal;
+end;
+
+procedure TfraContador.setMinutos(const Value: integer);
+begin
+  FMinutos := Value;
+  SetOriginal;
+end;
+
+procedure TfraContador.SetOriginal;
+begin
+lblOriginal.Text := Format('%s (%s:%s:%s)', [FDescripcion,
+  FormatFloat(',00', FHoras), FormatFloat('00', FMinutos),
+  FormatFloat('00', FSegundos)]);
+end;
+
+procedure TfraContador.setQuitarVisible(const Value: boolean);
+begin
+layQuitar.Visible := Value;
+end;
+
+procedure TfraContador.setSegundos(const Value: integer);
+begin
+  FSegundos := Value;
+  SetOriginal;
+end;
+
+procedure TfraContador.setTotalSegundos(const Value: integer);
+begin
+  FTotalSegundos := Value;
+  FActual := Value;
+end;
+
+end.

@@ -1,0 +1,144 @@
+object frmSeleccionarContador: TfrmSeleccionarContador
+  Left = 0
+  Top = 0
+  BorderStyle = None
+  Caption = 'Contador'
+  ClientHeight = 480
+  ClientWidth = 320
+  Fill.Kind = Solid
+  Position = OwnerFormCenter
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  DesignerMasterStyle = 0
+  object tbMain: TToolBar
+    Align = MostTop
+    Size.Width = 320.000000000000000000
+    Size.Height = 44.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    TintColor = claWhite
+    object recFondoToolBar: TRectangle
+      Align = Contents
+      Fill.Color = claWhite
+      Size.Width = 320.000000000000000000
+      Size.Height = 44.000000000000000000
+      Size.PlatformDefault = False
+      Stroke.Kind = None
+    end
+    object lblTitulo: TLabel
+      Align = Contents
+      StyledSettings = [Family, Size, Style]
+      Size.Width = 320.000000000000000000
+      Size.Height = 44.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'listboxheaderlabel'
+      TextSettings.FontColor = xFF2C3E50
+      TextSettings.HorzAlign = Center
+      Text = 'Contador'
+      TabOrder = 0
+    end
+    object sbtRegresar: TSpeedButton
+      Align = Left
+      ModalResult = 2
+      Size.Width = 80.000000000000000000
+      Size.Height = 44.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'backtoolbutton'
+      Text = 'Regresar'
+    end
+    object sbtGuardar: TSpeedButton
+      Align = Right
+      ModalResult = 1
+      Position.X = 240.000000000000000000
+      Size.Width = 80.000000000000000000
+      Size.Height = 44.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'addtoolbutton'
+      Text = 'Guardar'
+    end
+  end
+  object edDescripcion: TEdit
+    Touch.InteractiveGestures = [LongTap, DoubleTap]
+    Align = Top
+    StyleLookup = 'editstyle'
+    TabOrder = 1
+    Position.X = 3.000000000000000000
+    Position.Y = 50.000000000000000000
+    Margins.Left = 3.000000000000000000
+    Margins.Top = 6.000000000000000000
+    Margins.Right = 3.000000000000000000
+    Margins.Bottom = 9.000000000000000000
+    Size.Width = 314.000000000000000000
+    Size.Height = 22.000000000000000000
+    Size.PlatformDefault = False
+    TextPrompt = 'Descripcion'
+  end
+  object Tiempo: TLabel
+    Align = Top
+    Margins.Left = 3.000000000000000000
+    Margins.Right = 3.000000000000000000
+    Margins.Bottom = 3.000000000000000000
+    Position.X = 3.000000000000000000
+    Position.Y = 81.000000000000000000
+    Size.Width = 314.000000000000000000
+    Size.Height = 17.000000000000000000
+    Size.PlatformDefault = False
+    StyleLookup = 'listboxitemdetaillabel'
+    Text = 'Tiempo'
+    TabOrder = 2
+  end
+  object TMSFMXBadge1: TTMSFMXBadge
+    DisableFocusEffect = False
+    Position.X = 96.000000000000000000
+    Position.Y = 285.000000000000000000
+    TabOrder = 4
+    Size.Width = 27.000000000000000000
+    Size.Height = 27.000000000000000000
+    Size.PlatformDefault = False
+    Text = '1'
+    Version = '1.5.0.0'
+  end
+  object TMSFMXScrollMenu1: TTMSFMXScrollMenu
+    ClipChildren = True
+    DisableFocusEffect = False
+    Position.X = 72.000000000000000000
+    Position.Y = 128.000000000000000000
+    TabOrder = 5
+    Size.Width = 209.000000000000000000
+    Size.Height = 297.000000000000000000
+    Size.PlatformDefault = False
+    Items = <
+      item
+        SubItems = <
+          item
+            SubItems = <>
+            State = itsSelected
+            Text = 'SLR'
+          end
+          item
+            SubItems = <>
+            Text = 'SLK'
+          end
+          item
+            SubItems = <>
+            Text = 'GLK'
+          end>
+        State = itsSelected
+        Text = 'MERCEDES'
+      end
+      item
+        SubItems = <>
+        Text = 'AUDI'
+      end
+      item
+        SubItems = <>
+        Text = 'VW'
+      end
+      item
+        SubItems = <>
+        Text = 'BMW'
+      end>
+    Version = '1.0.0.1'
+  end
+end

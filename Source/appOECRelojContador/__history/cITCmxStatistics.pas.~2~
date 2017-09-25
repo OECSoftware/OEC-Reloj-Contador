@@ -1,0 +1,52 @@
+unit cITCmxStatistics;
+
+interface
+
+uses
+  System.SysUtils, System.Classes, uITCmxStatistics, Datasnap.DSClientRest;
+
+type
+  TcltITCStatistics = class(TDataModule)
+    rest: TDSRestConnection;
+  private
+    FInstanceOwner: Boolean;
+    FITCmxStatisticsClient: TITCmxStatisticsClient;
+    function GetITCmxStatisticsClient: TITCmxStatisticsClient;
+    { Private declarations }
+  public
+    constructor Create(AOwner: TComponent); override;
+    destructor Destroy; override;
+    property InstanceOwner: Boolean read FInstanceOwner write FInstanceOwner;
+    property ITCmxStatisticsClient: TITCmxStatisticsClient read GetITCmxStatisticsClient write FITCmxStatisticsClient;
+
+end;
+
+var
+  cltITCStatistics: TcltITCStatistics;
+
+implementation
+
+{%CLASSGROUP 'FMX.Controls.TControl'}
+
+{$R *.dfm}
+
+constructor TcltITCStatistics.Create(AOwner: TComponent);
+begin
+  inherited;
+  FInstanceOwner := True;
+end;
+
+destructor TcltITCStatistics.Destroy;
+begin
+  FITCmxStatisticsClient.Free;
+  inherited;
+end;
+
+function TcltITCStatistics.GetITCmxStatisticsClient: TITCmxStatisticsClient;
+begin
+  if FITCmxStatisticsClient = nil then
+    FITCmxStatisticsClient:= TITCmxStatisticsClient.Create(DSRestConnection1, FInstanceOwner);
+  Result := FITCmxStatisticsClient;
+end;
+
+end.
